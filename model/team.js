@@ -1,4 +1,4 @@
-var mongoose = require( 'mongoose' );
+var mongoose = require( 'mongoose' ), db = require('./db');
 
 var teamSchema = new mongoose.Schema({
   Country: String,
@@ -6,4 +6,4 @@ var teamSchema = new mongoose.Schema({
   CreatedOn: Date
 });
 
-var Team = module.exports = mongoose.model('Team', teamSchema);
+var Team = module.exports = db.model('Team', teamSchema);

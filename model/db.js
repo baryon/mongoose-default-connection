@@ -5,7 +5,7 @@ var mongoose = require( 'mongoose' );
 var dbURI = 'mongodb://localhost/ConnectionTest';
 
 // Create the database connection
-mongoose.connect(dbURI);
+var db = mongoose.connect(dbURI);
 
 // CONNECTION EVENTS
 // When successfully connected
@@ -32,6 +32,4 @@ process.on('SIGINT', function() {
 });
 
 
-// BRING IN YOUR SCHEMAS & MODELS
-// For example
-require('./team');
+module.exports = db;

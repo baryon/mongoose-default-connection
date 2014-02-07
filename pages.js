@@ -1,5 +1,5 @@
 var mongoose = require( 'mongoose' ),
-    Team = mongoose.model('Team');
+    Team = require('./model/team');
 
 exports.index = function (req, res) {
   Team.create({
